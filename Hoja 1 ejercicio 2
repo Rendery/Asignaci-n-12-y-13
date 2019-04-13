@@ -1,0 +1,22 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int ele , dino;
+	cout << "ingrese el peso del elefante: " << endl;
+	cin >> ele;
+	cout << "ingrese el peso del dinosaurio: " << endl;
+	cin >> dino;
+
+	if (ele > dino)
+	{
+		cout << "El elefante pesa más que el dinosaurio" << endl;
+	}
+	else
+	{
+		cout << "El dinosaurio pesa más que el Elefante" << endl;
+	}
+	_getch();
+}
+
