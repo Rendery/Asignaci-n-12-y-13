@@ -1,0 +1,19 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int num;
+	cout << "ingrese el numero: " << endl;
+	cin >> num;
+
+	if (num % 2 == 0)
+	{
+		cout << "es par" << endl;
+	}
+	else
+	{
+		cout << "es impar" << endl;
+	}
+	_getch();
+}
