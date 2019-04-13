@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int nota;
+	cout << "Escriba su nota: " << endl;
+	cin >> nota;
+
+	if ((0 <= nota)&&(nota <= 20))
+	{
+		if (nota < 12.5)
+		{
+		cout << "Desaprobado" << endl;
+		}else
+		if ((nota > 12.5)&&(nota <= 20))
+		{
+		cout << "Aprobado" << endl;
+		}
+	}
+	else
+	{
+		cout << "Error ----> Su nota no existe" << endl;
+	}
+	_getch();
+}
