@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+int main()
+{
+	int primer,segundo,tercer;
+	cout << "lados del triangulo: " << endl;
+	cout << "lado 1: " << endl;
+	cin >> primer;
+	cout << "lado 2: " << endl;
+	cin >> segundo;
+	cout << "lado 3: " << endl;
+	cin >> tercer;
+	
+	if ((primer < (segundo + tercer)) && (primer > (segundo - tercer)))
+	{
+		cout << "Es un triangulo " << endl;
+	}
+	else
+	{
+		cout << "No es un triangulo " << endl;
+	}
+
+	_getch();
+}
+
