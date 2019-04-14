@@ -1,0 +1,32 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double gb, precio;
+	cout << " Ingrese la cantidad de GBs consumidos: " << endl;
+	cin >> gb;
+	if (gb >= 0)
+	{
+		if (gb <= 4)
+		{
+			precio = 50;
+		}
+		if ((gb <= 8)&& (gb > 4))
+		{
+			precio = 85;
+		}
+		if (gb > 8)
+		{
+			precio = 85 + 4.5*(gb - 8);
+		}
+	cout << "El precio a pagar por los " << gb << "GB consumidos es de un total de " << precio << " soles por mes"<< endl;
+	}
+	else
+	{
+		cout << " ERROR " << endl;
+	}
+	_getch();
+}
