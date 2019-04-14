@@ -1,0 +1,36 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double nota;
+	cout << "Ingrese la nota del alumno: " << endl;
+	cin >> nota;
+
+	if ((nota >= 0) && (nota <= 20))
+	{
+		if (nota < 5)
+		{
+			cout << "Estudie " << endl;
+		}
+		if ((nota < 13)&&(nota >= 5))
+		{
+			cout << "Jalado " << endl;
+		}
+		if ((nota < 15) && (nota >= 13))
+		{
+			cout << "Raspando " << endl;
+		}
+		if ((nota < 20) && (nota >= 15))
+		{
+			cout << "Sobresaliente " << endl;
+		}
+		if (nota == 20)
+		{
+			cout << "Matricula de Honor " << endl;
+		}
+	}
+	_getch();
+}
