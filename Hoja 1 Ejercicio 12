@@ -1,0 +1,38 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int pon, fal;
+	cout << "Ingrese el ponderado: " << endl;
+	cin >> pon;
+	cout << "Ingrese la cantidad de faltas: " << endl;
+	cin >> fal;
+
+	if ((pon >= 0) && (pon <= 20))
+	{
+		if (pon >= 15)
+		{
+			if (fal == 0)
+			{
+				cout << "Usted SI obtendra la beca del 30% " << endl;
+			}
+			if (fal > 0)
+			{
+				cout << "Usted NO tendrá beca del 30% por superar la cantidad de faltas" << endl;
+			}
+		}
+		if (pon < 15)
+		{
+			cout << "Usted NO obtendra la beca del 30% por falta de promedio" << endl;
+		}
+	}
+	else
+	{
+		cout << "Error su nota excedio los limites [0-20] " << endl;
+	}
+
+	_getch();
+}
