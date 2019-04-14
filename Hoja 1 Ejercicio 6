@@ -1,12 +1,14 @@
 #include <iostream>
 #include <conio.h>
 #include <math.h>
+
 using namespace std;
+
 int main()
 {
-// x = (-B +-raiz(B*B-4*A*C))/(2*A)
 	int vA, vB, vC, dat, dato;
 	double  raiz_a, raiz_b;
+
 	cout << "Ingrese el valor de A: " << endl;
 	cin >> vA;
 	cout << "Ingrese el valor de B: " << endl;
@@ -18,13 +20,10 @@ int main()
 
 	raiz_a = (-1 * vB + sqrt(vB*vB - (4 * vA*vC))) / (2 * vA);
 	raiz_b = (-1 * vB + -1 * sqrt(vB*vB - (4 * vA*vC))) / (2 * vA);
-	dato = pow(vA*dat,2)+(vB*dat)+(vC);
+	dato = vA * pow(dat, 2) + (vB*dat) + (vC);
 
-	cout << " Raíz 1: " << raiz_a*1.00 << endl;
-	cout << " Raíz 2: " << raiz_b*1.00 << endl;
-	cout << "Ax2 + Bx + C = " << dato << endl;
-
-	cout << "--------------- " << endl;
+	cout << " Raiz 1: " << raiz_a*1.00 << endl;
+	cout << " Raiz 2: " << raiz_b*1.00 << endl;
+	cout << "(" << vA << ")" << dat << "^2 + " << vB << "(" << dat << ")" << " + " << vC << " = " << dato << endl;
 	_getch();
 }
-
