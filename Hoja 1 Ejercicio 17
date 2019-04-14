@@ -1,0 +1,47 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int x, y;
+		cout << "          y"			<< endl;
+		cout << "          |"			<< endl;
+		cout << "     IV   |   I"		<< endl;
+		cout << "-x----------------x"	<< endl;
+		cout << "    III   |  II"		<< endl;
+		cout << "          |"			<< endl;
+		cout << "         -y"			<< endl;
+		cout << endl;
+	cout << "Ingrese las coordenadas: " << endl;
+	cout << " X : " ; cin >> x;
+	cout << " Y : " ; cin >> y; cout << endl;
+	cout << "-------------------------" << endl;
+
+	cout << "Las coordenas: "<< x << " y " << y << " pertencen al ";
+	if (y < 0) //-y
+	{
+		if (x < 0) // -x
+		{
+			cout << "TERCERO CUADRANTE " << endl;
+		}
+		if (x >= 0) // +x
+		{
+			cout << "SEGUNDO CUADRANTE " << endl;
+		}
+	}
+	if (y >= 0) //+y
+	{
+		if (x < 0) // -x
+		{
+			cout << "CUARTO CUADRANTE " << endl;
+		}
+		if (x >= 0) // +x
+		{
+			cout << "PRIMER CUADRANTE " << endl;
+		}
+	}
+	_getch();
+}
+
