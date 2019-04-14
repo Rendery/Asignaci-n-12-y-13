@@ -1,0 +1,28 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int edad;
+	char sexo;
+	cout << "Ingrese el sexo de la persona (F o M): " << endl;
+	cin >> sexo;
+	cout << "Ingrese la edad de la persona: " << endl;
+	cin >> edad;
+
+	if ((sexo == 'M')||(sexo == 'm'))
+	{
+		cout << "El número debe ser de " << (210 - edad) / 10.00 << " pulsaciones por cada 10 segundos." << endl;
+	}
+	if ((sexo == 'F')|| (sexo == 'f'))
+	{
+		cout << "El número debe ser de " << (220 - edad) / 10.00 << " pulsaciones por cada 10 segundo." << endl;
+	}
+	else
+	{
+		cout << "Error ...";
+	}
+		_getch();
+}
