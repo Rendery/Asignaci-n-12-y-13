@@ -1,0 +1,33 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int num, a1, a2, a3;
+	cout << "Ingrese el numero: " << endl;
+	cin >> num;
+
+	a1 = (num / 100);
+	a2 = (num % 100 / 10);		//	orden: a1 a2 a3
+	a3 = (num % 10);
+
+	if ((num >= 100) && (num <= 999))
+	{
+		if (a1 == a3)
+		{
+			cout << "Es numero capicua";
+		}
+		else
+		{
+			cout << "No es numero capicua";
+		}
+		
+	}
+	else
+	{
+		cout << "numero incorrecto";
+	}
+	_getch();
+}
