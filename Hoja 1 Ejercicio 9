@@ -1,0 +1,27 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int equipo1, equipo2;
+	cout << "Ingrese la cantidad de goles del equipo local : " << endl;
+	cin >> equipo1;
+	cout << "Ingrese la cantidad de goles del equipo visitante : " << endl;
+	cin >> equipo2;
+	
+	if (equipo1 > equipo2) 
+	{
+		cout << "Gano el equipo local" << endl;
+	}
+	if (equipo1 == equipo2)
+	{
+		cout << "Empate" << endl;
+	}
+	if (equipo1 < equipo2)
+	{
+		cout << "Gano el equipo visitante " << endl;
+	}
+		_getch();
+}
