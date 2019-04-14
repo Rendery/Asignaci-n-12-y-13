@@ -1,0 +1,49 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	//Promedio = 30 % *Nota1 + 30 % *Nota2 + 40 % *Nota3    258 259
+
+
+
+	double prom, n1, n2, n3;
+	long cod;
+	cout << "Ingrese el código del alumno : " << endl;
+	cin >> cod;
+	cout << "Ingrese las tres notas del alumno " << cod << ": " << endl;
+	cin >> n1;
+	cin >> n2;
+	cin >> n3;
+
+	prom = (3*n1 + 3*n2 + 4*n3)/10;
+	
+	if ((prom >= 0) && (prom <= 20))
+	{
+		cout << "Promedio del alumno " << cod << " es : " << prom << endl;
+
+		if ((prom >= 0) && (prom < 13))
+		{
+			cout << " estudia";
+		}
+		if ((prom >= 13) && (prom < 15))
+		{
+			cout << " Felicitaciones ";
+		}
+		if ((prom >= 15) && (prom < 20))
+		{
+			cout << " Felicitaciones :D :D";
+		}
+		if (prom == 20)
+		{
+			cout << " Felicitaciones :D :D :D";
+		}
+	}
+	else
+	{
+		cout << "promedio incorrecto";
+	}
+	_getch();
+}
