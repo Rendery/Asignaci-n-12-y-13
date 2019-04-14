@@ -1,0 +1,24 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int poci;
+	cout << "Ingrese la posición del equipo en la tabla : " << endl;
+	cin >> poci;
+	if ((poci >= 1) && (poci <= 4))
+	{
+		cout << "El equipo seleccionado irá al mundial !!!" << endl;
+	}
+	if (poci == 5)
+	{
+		cout << "El equipo seleccionado irá repechaje !!!" << endl;
+	}
+	if (poci >= 6)
+	{
+		cout << "Cómprate una TV LED para ver el mundial !!!" << endl;
+	}
+	_getch();
+}
