@@ -1,0 +1,31 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double T1, T2, T3, pro, total;
+	cout << "Ingrese la cantidad de caramelos que va a comprar por el Tipo 1 : " << endl;
+	cin >> T1;
+	cout << "Ingrese la cantidad de caramelos que va a comprar por el Tipo 2 : " << endl;
+	cin >> T2;
+	cout << "Ingrese la cantidad de caramelos que va a comprar por el Tipo 3 : " << endl;
+	cin >> T3;
+	cout << "Ingrese el Monto de la Propina : " << endl;
+	cin >> pro;
+
+	total = T1*0.75 + T2*1.15 + T3*0.65;
+	cout << "El monto total de la compra es : " << total << endl;
+
+	if ((total) > pro)
+	{
+		cout << "LA PROPINA NO FUE SUFICIENTE PARA PAGAR POR LOS CARAMELOS";
+	}
+	if ((total) < pro)
+	{
+		cout << "LA PROPINA FUE SUFICIENTE PARA PAGAR LOS CARAMELOS";
+	}
+
+	_getch();
+}
