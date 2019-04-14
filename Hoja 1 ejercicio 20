@@ -1,0 +1,30 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double cred;
+	cout << "Ingrese la cantidad de créditos acumulados: " << endl;
+	cin >> cred;
+
+		if (cred < 32)
+		{
+			cout << "El alumno se encuentra en PRIMER A" << char (165) << "O " << endl;
+		}
+		if ((cred <= 63) && (cred >= 32))
+		{
+			cout << "El alumno se encuentra en SEGUNDO A" << char (165) << "O " << endl;
+		}
+		if ((cred <= 95) && (cred >= 64))
+		{
+			cout << "El alumno se encuentra en TERCER A" << char (165) << "O " << endl;
+		}
+		if (cred > 96)
+		{
+			cout << "El alumno se encuentra en CUARTO A" << char (165) << "O " << endl;
+		}
+	
+	_getch();
+}
