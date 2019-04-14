@@ -1,0 +1,21 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int num;
+	cout << "Ingrese el numero: " << endl;
+	cin >> num;
+
+	if ((num >= 100) && (num <= 999))
+	{
+		cout << "numero al reves: " << (num % 10) << (num % 100 / 10) << (num / 100);
+	}
+	else
+	{
+		cout << "numero incorrecto";
+	}
+	_getch();
+}
