@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double horas, precio = 0;
+	cout << "Ingrese el total de horas trabajadas por el obrero:  " << endl;
+	cin >> horas;
+
+	if (horas <= 40)
+	{
+		precio = horas * 16;
+	}
+	if (horas > 40)
+	{
+		precio = (40 * 16) + (horas - 40)*20;
+	}
+
+
+	cout << "El salario semanal del obrero es de $" << precio << endl;
+
+	_getch();
+}
