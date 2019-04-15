@@ -1,0 +1,34 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double num, precio, costo, descu, total;
+
+	cout << "Ingrese el número de computadoras a comprar $$$: " << endl;
+	cin >> num;
+
+	precio = 760.0;
+	costo = (precio * num);
+	
+	if (num <= 5)
+	{
+		descu = costo * 10 / 100;		// -10% 
+		
+	}
+	if ((num <= 5) && (num > 10))
+	{
+		descu = costo * 20 / 100;			// -20%
+	}
+	if (num >= 10)
+	{
+		descu = costo * 40 / 100;		// -40% 
+	}
+
+
+	cout << "El costo es de $" << costo << " y el total aplicando el descuento de $" << descu << " es de $" << costo - descu << endl;
+
+	_getch();
+}
