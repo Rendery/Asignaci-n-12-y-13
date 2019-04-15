@@ -1,0 +1,59 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+		//	Ingrese zona(1 – 2) : 2
+		//	Ingrese consumo : 245
+		//	El monto a pagar es : 156.5 soles
+
+		/*Si la zona es Comercial se cobra una tarifa fija de 50 soles, luego por los primeros 100
+		kilowatts se les cobra 0.75 soles y por cada kilowatt por encima de los 100 se le cobra
+		0.9 soles.
+		 Si la zona es Residencial, se cobra una tarifa fija de 25 soles, luego por los primeros 100
+		kilowatts se les cobra 0.30 soles y por cada kilowatt por encima de los 100 se les cobra
+		0.7 soles.*/
+
+	double zona, con, precio = 0;
+	cout << "Ingrese zona(1 – 2) : " << endl;
+	cin >> zona;
+	cout << "Ingrese consumo : " << endl;
+	cin >> con;
+
+	if (zona == 1) // comercial
+	{
+		if (con <= 100)
+		{
+			precio = 0.75*con;
+		}
+		else if (con >= 100)
+		{
+			precio = (0.75*100)+(con-100)*0.9;
+		}
+		precio = precio + 50;
+	}
+	else
+	if (zona == 2) // comercial
+	{
+		if (con <= 100)
+		{
+			precio = 0.3*con;
+		}
+		else if (con >= 100)
+		{
+			precio = (0.3 * 100) + (con - 100)*0.7;
+		}
+		precio = precio + 25;
+	}
+	else
+	{
+		cout << " ERROR " << endl;
+	}
+
+
+	cout << "El monto a pagar es : " << precio << endl;
+
+	_getch();
+}
