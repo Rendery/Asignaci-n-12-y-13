@@ -1,0 +1,43 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double cursos, ciclo,costo;
+	costo = 155.00;
+	cout << "Ingrese el número de cursos:  " << endl;
+	cin >> cursos;
+	cout << "Ingrese el número ciclo a cursar:  " << endl;
+	cin >> ciclo;
+	if ((cursos > 0) && (ciclo > 0))
+	{
+		if ((cursos == 1)|| (cursos == 2)|| (cursos == 3))
+		{
+			costo = costo*cursos * 90 / 100;
+		}
+		if ((cursos == 4) || (cursos == 5) || (cursos == 6))
+		{
+			costo = costo*cursos * 85 / 100;
+		}
+		if ((cursos == 7) || (cursos == 8))
+		{
+			costo = costo*cursos * 83 / 100;
+		}
+		if ((cursos == 9) || (cursos == 10))
+		{
+			costo = costo*cursos * 82 / 100;
+		}
+		if (cursos > 10)
+		{
+			cout << "ERROR " << endl;
+		}
+		cout << "El costo es de $" << costo << endl;
+	}
+	else
+	{
+		cout << "ERROR " << endl;
+	}
+	_getch();
+}
