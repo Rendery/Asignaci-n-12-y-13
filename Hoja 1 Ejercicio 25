@@ -1,0 +1,23 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double dia,num;
+
+	cout << "Ingrese el diámetro en centímetros: " << endl;
+	cin >> dia;
+	cout << "Ingrese el número de ingredientes extras: " << endl;
+	cin >> num;
+	if ((dia > 0) && (num > 0))
+	{
+		cout << " El precio total de la pizza es de " << dia*1.5 + 2.5*num << endl;
+	}
+	else
+	{
+		cout << "ERROR " << endl;
+	}
+	_getch();
+}
