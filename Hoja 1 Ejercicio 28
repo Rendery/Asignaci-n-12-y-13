@@ -1,0 +1,85 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int num, total;
+	char escala;
+	cout << "Ingresa la escala de pago: " << endl;
+	cin >> escala;
+	escala = toupper(escala);
+	cout << "Ingresa el número de cursos: " << endl;
+	cin >> num;
+
+	switch (escala)
+	{
+		case 'A':
+		{
+			if ((num <= 5) && (num >= 1))
+			{
+				total = 350 + 400;
+			}
+			else if((num <= 8) && (num >= 6))
+			{
+				total = 350 + 600;
+			}
+			else if (num >= 8)
+			{
+				total = 350 + 900;
+			}
+		}
+		break;
+		case 'B':
+		{
+			if ((num <= 5) && (num >= 1))
+			{
+				total = 350 + 350;
+			}
+			else if ((num <= 8) && (num >= 6))
+			{
+				total = 350 + 500;
+			}
+			else if (num >= 8)
+			{
+				total = 350 + 700;
+			}
+		}
+		break;
+		case 'C':
+		{
+			if ((num <= 5) && (num >= 1))
+			{
+				total = 350 + 320;
+			}
+			else if ((num <= 8) && (num >= 6))
+			{
+				total = 350 + 480;
+			}
+			else if (num >= 8)
+			{
+				total = 350 + 685;
+			}
+		}
+		break;
+		case 'D':
+		{
+			if ((num <= 5) && (num >= 1))
+			{
+				total = 350 + 310;
+			}
+			else if ((num <= 8) && (num >= 6))
+			{
+				total = 350 + 475;
+			}
+			else if (num >= 8)
+			{
+				total = 350 + 680;
+			}
+		}
+	}
+	cout << "El importe a cancelar es de S/" << total << endl;
+
+	_getch();
+}
