@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double edad,total,tipo;
+
+	cout << "Ingrese la edad del espectador:  " << endl;
+	cin >> edad;
+
+	total = 15;
+
+	if ((edad <= 14) && (edad >= 5))
+	{
+		cout << "El tipo de la entrada es [Entrada 1] y el costo es de " << total*(100-35)/100.00 << endl;	
+		
+	}else
+	if ((edad <= 19) && (edad >= 15))
+	{
+		cout << "El tipo de la entrada es [Entrada 2] y el costo es de " << total*(100 - 25) / 100.00 << endl;
+	}else
+	if ((edad <= 45) && (edad >= 20))
+	{
+		cout << "El tipo de la entrada es [Entrada 3] y el costo es de " << total*(100 - 10) / 100.00 << endl;
+	}else
+	if ((edad <= 65) && (edad >= 46))
+	{
+		cout << "El tipo de la entrada es [Entrada 4] y el costo es de " << total*(100 - 22) / 100.00 << endl;
+	}else
+	if (edad >= 66)
+	{
+		cout << "El tipo de la entrada es [Entrada 5] y el costo es de " << total*(100 - 50) / 100.00 << endl;
+	}
+	else
+	{
+		cout << "Usted no tiene la suficiente edad para pedir una entrada" << endl;
+	}
+	_getch();
+}
