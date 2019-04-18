@@ -1,0 +1,38 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	double tipo, cons, precio;
+
+	cout << "Ingrese el tipo de consumo [Comoercial:1] o [Domestico:2]" << endl;
+	cin >> tipo;
+	cout << "Ingrese el consumo por KWH: " << endl;
+	cin >> cons;
+
+	if (tipo == 1)
+	{
+		precio = cons * 1.58;
+	}
+	if (tipo == 2)
+	{
+		if (cons <= 100)
+		{
+			precio = cons * 0.35;
+		}
+		if ((cons > 100) && (cons <= 500))
+		{
+			precio = (100 * 0.35)+((cons - 100) * 1.05);
+		}
+		if (cons > 500) 
+		{
+			precio = (100 * 0.35) + (400 * 1.05) + ((cons - 500)*1.36);
+		}
+	}
+
+	cout << "Resultado = " << precio;
+	_getch();
+}
