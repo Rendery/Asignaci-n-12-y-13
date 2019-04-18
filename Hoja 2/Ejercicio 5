@@ -1,0 +1,51 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+	int dia , mes ,ano;
+
+	cout << "Ingrese el a" << char(164) << "o: " << endl;
+	cin >> ano;
+	cout << "Ingrese el mes: " << endl;
+	cin >> mes;
+
+	if (ano % 4 == 0) // bisiesto
+	{
+		if ((mes == 1) || (mes == 3) || (mes == 5) || (mes == 7) || (mes == 8) || (mes == 10) || (mes == 12))
+		{
+			dia = 31;
+		}
+		else
+		if ((mes == 4) || (mes == 6) || (mes == 9) || (mes == 11))
+		{
+			dia = 30;
+		}
+		else if (mes == 2)
+		{
+			dia = 28;
+		}
+	}
+	else
+	{
+		if ((mes == 1) || (mes == 3) || (mes == 5) || (mes == 7) || (mes == 8) || (mes == 10) || (mes == 12))
+		{
+			dia = 31;
+		}
+		else
+		if ((mes == 4) || (mes == 6) || (mes == 9) || (mes == 11))
+		{
+			dia = 30;
+		}
+		else if (mes == 2)
+		{
+			dia = 29;
+		}
+	}
+
+	cout << "Resultado = " << dia;
+	_getch();
+}
