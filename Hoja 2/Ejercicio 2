@@ -1,0 +1,58 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int horas,total;
+	char tipo;
+
+	cout << "Ingrese el tipo de categoria: " << endl;
+	cin >> tipo;
+	tipo = toupper(tipo);
+
+	switch (tipo)
+	{
+	case 'A':
+	{
+		cout << "Ingrese las horas trabajadas: " << endl;
+		cin >> horas;
+		cout << " Total a pagar: s/" << horas * 30;
+	}
+	break;
+	case 'B':
+	{
+		cout << "Ingrese las horas trabajadas: " << endl;
+		cin >> horas;
+		cout << " Total a pagar: s/" << horas * 35;
+	}
+	break;
+	case 'C':
+	{
+		cout << "Ingrese las horas trabajadas: " << endl;
+		cin >> horas;
+		cout << " Total a pagar: s/" << horas * 40;
+	}
+	break;
+	case 'D':
+	{
+		cout << "Ingrese las horas trabajadas: " << endl;
+		cin >> horas;
+		cout << " Total a pagar: s/" << horas * 45;
+	}
+	break;
+	case 'E':
+	{
+		cout << "Ingrese las horas trabajadas: " << endl;
+		cin >> horas;
+		cout << " Total a pagar: s/" << horas * 50;
+	}
+	break;
+	default:
+		cout << "ERROR en el tipo de categoría...";
+		break;
+	}
+
+	_getch();
+}
