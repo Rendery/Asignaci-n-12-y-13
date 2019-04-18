@@ -1,0 +1,74 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int menu, mes, ano;
+
+	cout << "           ---  MENU  ---         " << endl;
+	cout << endl;
+	cout << "   [1]     Calcular Area del TRIANGULO     " << endl;
+	cout << "   [2]     Calcular Area del RECTANGULO     " << endl;
+	cout << "   [3]     Calcular Area del CIRCULO     " << endl;
+	cout << "   [4]     Calcular Area del CUADRADO    " << endl;
+	cout << "   [5]     SALIR...    " << endl;
+	cout << endl;
+	cout << "     ....   cual es su opcion   ....  " << endl;
+
+	cin >> menu;
+
+	switch (menu)
+	{
+		case 1: 
+		{
+			double base,altura;
+			cout << "      ---- Area del TRIANGULO ----" << endl;
+			cout << "  Ingrese la base del triangulo: " << endl;
+			cin >> base;
+			cout << "  Ingrese la altura del triangulo: " << endl;
+			cin >> altura;
+			cout << "EL AREA DEL TRIANGULO ES: " << endl;
+			cout << base * altura / 2 << endl;
+		}
+			break;
+		case 2:
+		{
+			double base, altura;
+			cout << "      ---- Area del RECTANGULO ----" << endl;
+			cout << "  Ingrese la base del RECTANGULO: " << endl;
+			cin >> base;
+			cout << "  Ingrese la altura del RECTANGULO: " << endl;
+			cin >> altura;
+			cout << "  EL AREA DEL RECTANGULO ES:  " << endl;
+			cout << base * altura << endl;
+		}
+			break;
+		case 3:
+		{
+			double radio;
+			cout << "      ---- Area del CIRCULO ----" << endl;
+			cout << "  Ingrese el radio del circulo: " << endl;
+			cin >> radio;
+			cout << "  EL AREA DEL CIRCULO ES:  " << endl;
+			cout << radio*radio*3.14 << endl;
+		}
+			break;
+		case 4:
+		{
+			double lado;
+			cout << "      ---- Area del CUADRADO ----" << endl;
+			cout << "  Ingrese el lado del CUADRADO: " << endl;
+			cin >> lado;
+			cout << "  EL AREA DEL CUADRADO ES:  " << endl;
+			cout << lado * lado << endl;
+		}
+			break;
+		default:
+			cout << "---> ERROR    la opción no es valida..." << endl;
+			break;
+	}
+
+	_getch();
+}
