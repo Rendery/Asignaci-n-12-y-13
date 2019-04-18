@@ -1,0 +1,107 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	int dia, mes, ano;
+	string color;
+
+	cout << "Ingresa tu dia de nacimiento:   " << endl;
+	cin >> dia;
+	cout << "Ingresa tu mes de nacimiento:  " << endl;
+	cin >> mes;
+	cout << "Ingresa tu a" << char (164) << "o de nacimiento: " << endl;
+	cin >> ano;
+
+	switch (mes)
+	{
+		case 1 : case 2: case 3:
+		{
+			if ((dia % 2 == 0) && (ano % 2 == 0))
+			{
+				color = "ROJO";
+			}
+			if ((dia % 2 != 0) && (ano % 2 == 0))
+			{
+				color = "CELESTE";
+			}
+			if ((dia % 2 == 0) && (ano % 2 != 0))
+			{
+				color = "MORADO";
+			}
+			if ((dia % 2 != 0) && (ano % 2 != 0))
+			{
+				color = "NEGRO";
+			}
+		}
+		break;
+		case 4: case 5: case 6:
+		{
+			if ((dia % 2 == 0) && (ano % 2 == 0))
+			{
+				color = "NARANJA";
+			}
+			if ((dia % 2 != 0) && (ano % 2 == 0))
+			{
+				color = "VERDE";
+			}
+			if ((dia % 2 == 0) && (ano % 2 != 0))
+			{
+				color = "TURQUESA";
+			}
+			if ((dia % 2 != 0) && (ano % 2 != 0))
+			{
+				color = "GRIS";
+			}
+		}
+		break;
+		case 7: case 8: case 9:
+		{
+			if ((dia % 2 == 0) && (ano % 2 == 0))
+			{
+				color = "MARRON";
+			}
+			if ((dia % 2 != 0) && (ano % 2 == 0))
+			{
+				color = "FUCSIA";
+			}
+			if ((dia % 2 == 0) && (ano % 2 != 0))
+			{
+				color = "AZUL";
+			}
+			if ((dia % 2 != 0) && (ano % 2 != 0))
+			{
+				color = "AMARILLO";
+			}
+		}
+		break;
+		case 10: case 11: case 12:
+		{
+			if ((dia % 2 == 0) && (ano % 2 == 0))
+			{
+				color = "VIOLETA";
+			}
+			if ((dia % 2 != 0) && (ano % 2 == 0))
+			{
+				color = "ROSADO";
+			}
+			if ((dia % 2 == 0) && (ano % 2 != 0))
+			{
+				color = "OLIVO";
+			}
+			if ((dia % 2 != 0) && (ano % 2 != 0))
+			{
+				color = "BLANCO";
+			}
+		}
+		break;
+	}
+
+	cout << "TU COLOR ES: ";
+	cout << color;
+
+	_getch();
+}
