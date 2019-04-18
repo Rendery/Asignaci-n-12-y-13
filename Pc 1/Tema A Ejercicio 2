@@ -1,0 +1,30 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string codi,dia,mes,ano,lima,grande,ope;
+	int ciudad, operando;
+	cout << "Ingrese código único de contribuyente: " << endl;
+	cin >> codi;
+
+	ano = codi.substr(0, 4);
+	mes = codi.substr(4, 2);
+	dia = codi.substr(6, 2);
+	lima = codi.substr(8, 3);
+	ope = codi.substr(11, 1);
+
+	ciudad = (lima == "LIM");
+	operando = (ope == "G");
+
+	cout << "Día de alta: " << dia << endl;
+	cout << "Mes de alta: " << mes << endl;
+	cout << "A" << char(164) << "o de alta: " << ano << endl;
+	cout << "Empresa de Lima(0: No; 1: Si): " << ciudad << endl;
+	cout << "Empresa grande(0: No; 1: Si): " << operando << endl;
+	cout << "A" << char(164) << "o operando: " << 0 << endl;
+
+	_getch();
+}
