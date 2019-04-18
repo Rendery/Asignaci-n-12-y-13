@@ -1,0 +1,24 @@
+#include <iostream>
+#include <conio.h>
+#include <math.h>
+using namespace std;
+double precioTerreno(double terre, double dola, double tipo)
+{
+	double precio;
+	precio = terre * dola * tipo;
+	return precio;
+}
+int main()
+{
+	double tipo, terre, precio, dola;
+
+	cout << "Ingrese el tamaño del terreno en metros cuadrados: " << endl;
+	cin >> terre;
+	cout << "Ingrese el precio por metro cuadrado en dólares: " << endl;
+	cin >> dola;
+	cout << "Ingrese el tipo de cambio del día : " << endl;
+	cin >> tipo;
+
+	cout << "El precio total de venta en soles del terreno es: " << double(precioTerreno(terre,dola,tipo));
+	_getch();
+}
