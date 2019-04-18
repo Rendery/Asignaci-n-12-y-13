@@ -1,0 +1,85 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int dia, mes,num;
+
+	cout << "Ingrese el dia: " << endl;
+	cin >> dia; 
+	cout << "Ingrese el mes: " << endl;
+	cin >> mes; 
+				
+	num = mes * 100 + dia;		
+
+	if (num > 0)
+	{
+		if (((num > 0) && (num <= 120)) || ((num >= 1222) && (num <= 1231)))
+		{
+			cout << "El signo es Capricornio" << endl;
+		}
+		else
+		if ((num >= 121) && (num <= 219))
+		{
+			cout << "El signo es Acuario" << endl;
+		}
+		else
+		if ((num >= 220) && (num <= 320))
+		{
+			cout << "El signo es Piscis" << endl;
+		}
+		else
+		if ((num >= 321) && (num <= 420))
+		{
+			cout << "El signo es Aries" << endl;
+		}
+		else
+		if ((num >= 421) && (num <= 521))
+		{
+			cout << "El signo es Tauro" << endl;
+		}
+		else
+		if ((num >= 522) && (num <= 621))
+		{
+			cout << "El signo es Geminis" << endl;
+		}
+		else
+		if ((num >= 622) && (num <= 723))
+		{
+			cout << "El signo es Cancer" << endl;
+		}
+		else
+		if ((num >= 724) && (num <= 823))
+		{
+			cout << "El signo es Leo" << endl;
+		}
+		else
+		if ((num >= 824) && (num <= 923))
+		{
+			cout << "El signo es Virgo" << endl;
+		}
+		else
+		if ((num >= 924) && (num <= 1023))
+		{
+			cout << "El signo es Libra" << endl;
+		}
+		else
+		if ((num >= 1024) && (num <= 1122))
+		{
+			cout << "El signo es Escorpio" << endl;
+		}
+		else
+		if ((num >= 1123) && (num <= 1221))
+		{
+			cout << "El signo es Sagitario" << endl;
+		}
+		else
+		{
+			cout << "Error" << endl;
+		}
+	}
+
+	_getch();
+}
