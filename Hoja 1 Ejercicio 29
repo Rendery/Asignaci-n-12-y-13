@@ -1,0 +1,111 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	int num, total, mant;
+	char model;
+	string mes;
+
+	cout << "Ingrese el modelo:  " << endl;
+	cin >> model;
+	cout << "Ingrese el último dígito de la placa:  " << endl;
+	cin >> num;
+	cout << "Ingrese el costo de mantenimiento anual : " << endl;
+	cin >> mant;
+
+	model = toupper(model);
+	
+	if (model == 'A')
+	{
+		switch (num)
+		{
+		case 0: case 1: case 2: case 3: case 5:
+			{
+				if (mant <= 500)
+				{
+					mes = "ENERO";
+				}
+				else if (mant > 500)
+				{
+					mes = "FEBRERO";
+				}
+			}
+			break;
+		case 6: case 7: case 8:
+			{
+				if (mant <= 700)
+				{
+					mes = "JUNIO";
+				}
+				else if (mant > 700)
+				{
+					mes = "JULIO";
+				}
+			}
+			break;
+		case 9:
+		{
+			if (mant <= 1000)
+			{
+				mes = "OCTUBRE";
+			}
+			else if (mant > 1000)
+			{
+				mes = "NOVIEMBRE";
+			}
+		}
+			break;
+		}
+	}
+	if (model == 'B')
+	{
+		switch (num)
+		{
+		case 1: case 2: case 3:
+		{
+			if (mant <= 500)
+			{
+				mes = "MARZO";
+			}
+			else if (mant > 500)
+			{
+				mes = "ABRIL";
+			}
+		}
+		break;
+		case 4: case 5: case 6: case 7: case 8:
+		{
+			if (mant <= 700)
+			{
+				mes = "MAYO";
+			}
+			else if (mant > 700)
+			{
+				mes = "SETIEMBRE";
+			}
+		}
+		break;
+		case 0: case 9:
+		{
+			if (mant <= 1000)
+			{
+				mes = "AGOSTO";
+			}
+			else if (mant > 1000)
+			{
+				mes = "DICIEMBRE";
+			}
+		}
+		break;
+		}
+	}
+	
+	cout << "El mes de revisión técnica es ";
+	cout << mes;
+
+	_getch();
+}
