@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	double cama , precio;
+	char vista,dia;
+
+	cout << "Ingrese la vista (M: Mar, I: Interior): " << endl;
+	cin >> vista;
+	cout << "Día de ingreso (L: lunes-jueves; V: viernes o sábado; D: domingo): " << endl;
+	cin >> dia;
+	cout << "Camas: " << endl;
+	cin >> cama;
+
+	dia = toupper(dia);
+	vista = toupper(vista);
+
+	precio = (((vista == 'M') * ((dia == 'L')|| (dia == 'M')|| (dia == 'J'))) * (20.4)) + (((vista == 'M') * ((dia == 'V') || (dia == 'S'))) * (80.8)) + ((vista == 'M') * (dia == 'D') * (70.1)) + (((vista == 'I') * ((dia == 'L')|| (dia == 'M')|| (dia == 'J'))) * (15.7)) + (((vista == 'I') * ((dia == 'V') || (dia == 'S'))) * (60.7)) + ((vista == 'I') * (dia == 'D') * (65.8));
+	precio = ((cama == 1)*(precio * 100 / 100)) + (((cama == 2) || (cama == 3))*(precio * 112 / 100)) + ((cama > 3)*(precio * 125 / 100));
+
+	cout << "Precio del ticket: " << precio << endl;
+	_getch();
+}
