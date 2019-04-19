@@ -1,0 +1,20 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	double num, sueldo, SB=900;
+	char cod;
+	cout << "Ingrese las ventas del colaborador: " << endl;
+	cin >> num;
+	cout << "Ingrese el código de la tienda: " << endl;
+	cin >> cod;
+	cod = toupper(cod);
+	sueldo = ((num == 0) * SB) + (((num >= 1) && (num <= 5)) * SB * 110 / 100) + (((num >= 5) && (num <= 10)) * SB * 115 / 100) + ((num > 10) * SB * 125 / 100);
+	sueldo = ((cod == 'M') * (sueldo * 102 / 100)) + ((cod == 'S') * (sueldo * 105 / 100)) + ((cod == 'L') * (sueldo * 110 / 100)) + ((cod == 'A') * (sueldo * 115 / 100));
+	cout << "El sueldo correspondiente es: " << sueldo << endl;
+	_getch();
+}
