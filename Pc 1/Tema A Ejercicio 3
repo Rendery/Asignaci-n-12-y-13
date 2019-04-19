@@ -1,0 +1,28 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+	double mal, precio, preprecio;
+	char aero, dia;
+
+	cout << "Ingrese la Aerolínea (L: LATAM, V: Viva): " << endl;
+	cin >> aero;
+	cout << "Día (L: lunes; V: viernes; S: sábado; D:domingo):  " << endl;
+	cin >> dia;
+	cout << "Maletas:  " << endl;
+	cin >> mal;
+
+	aero = toupper(aero);
+	dia = toupper(dia);
+
+	preprecio = ((aero == 'L') * (dia == 'L') * (70.4)) + ((aero == 'L') * ((dia == 'V') || (dia == 'S')) * (100.8)) + ((aero == 'L') * (dia == 'D') * (90.1)) + ((aero == 'V') * (dia == 'L') * (20.4)) + ((aero == 'V') * ((dia == 'V') || (dia == 'S')) * (70.6)) + ((aero == 'V') * (dia == 'D') * (80.3));
+	precio = ((mal == 0) * (preprecio)) + (((mal == 1) || (mal == 2)) * preprecio * 115 / 100) + ((mal > 2) * preprecio * 130 / 100);
+
+	cout << "Precio del ticket: ";
+	cout << precio;
+	_getch();
+}
