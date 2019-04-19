@@ -1,0 +1,26 @@
+Algoritmo Ejercicio1
+	
+	Escribir 'Ingrese los años trabajados en la empresa: '
+	Leer anos
+	Escribir 'Ingrese su sueldo: '
+	Leer sueldo
+	
+	si anos<=3 entonces
+		bono = sueldo * 104 / 100
+		Escribir 'Usted tendra un bono de 4% y pagará: ' bono
+		FinSi
+	si (anos>3)y(anos<=5) entonces
+		bono = sueldo * 106 / 100
+		Escribir 'Usted tendra un bono de 6% y pagará: ' bono
+	FinSi
+	si (anos>5)y(anos<=10) entonces
+		bono = sueldo * 110 / 100
+		Escribir 'Usted tendra un bono de 10% y pagará: ' bono
+	FinSi
+	si (anos>10) entonces
+		bono = sueldo * 115 / 100
+		Escribir 'Usted tendra un bono de 15% y pagará: ' bono
+	FinSi
+	
+	
+FinAlgoritmo
